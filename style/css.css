@@ -740,7 +740,7 @@ img {
 		}
 	}
 	@media (max-width: 480px) {
-		.about-me__anim {
+		..about-me__anim {
 			transform: rotate(0) translateX(0) translateY(-500px);
 		}
 	}*/
