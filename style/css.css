@@ -714,33 +714,3 @@ img {
 
 /*---*/
 
-
-
-/*.about-me__anim {
-		transform: rotate(0) translateX(0) translateY(0);
-	}
-	@media (max-width: 1725px) {
-		.about-me__anim {
-			transform: rotate(0) translateX(0) translateY(-30px);
-		}
-	}
-	@media (max-width: 1025px) {
-		.about-me__anim {
-			transform: rotate(0) translateX(0) translateY(0);
-		}
-	}
-	@media (max-width: 1023px) {
-		.about-me__anim {
-			transform: rotate(0) translateX(0) translateY(-10px);
-		}
-	}
-	@media (max-width: 719px) {
-		.about-me__anim {
-			transform: rotate(0) translateX(80px) translateY(-10px);
-		}
-	}
-	@media (max-width: 480px) {
-		..about-me__anim {
-			transform: rotate(0) translateX(0) translateY(-500px);
-		}
-	}*/
