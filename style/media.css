@@ -42,7 +42,6 @@
 		right: 95px;
 		transform: rotate(-24deg);
 		font-size: 40.77px;
-		word-spacing: -11px;
 	}
 	.info-costs-me__attribut3 {
 		top: 190px;
@@ -61,7 +60,6 @@
 		right: 455px;
 		transform: rotate(20deg);
 		font-size: 24.91px;
-		word-spacing: -5px;
 	}
 	.about-me__anim {
 		transform: rotate(0) translateX(0) translateY(-30px);
@@ -69,14 +67,6 @@
 }
 
 @media (max-width: 1200px) {
-	.about-me__ellipse-1920 {
-		display: none;
-	}
-	.about-me__ellipse-1024 {
-		display: block;
-	}
-
-
 	.info-costs-me__container {
 		margin: 0 auto;
 		max-width: 945px;
@@ -154,6 +144,9 @@
 				margin-top: 10px;
 			}
 
+	.about-me {
+		background-image: url(../img/about-me/gradient-1024.png);
+	}
 	.about-me__info {
 		padding-top: 180px;
 	}
@@ -180,14 +173,15 @@
 			color: #8993ad;
 			font-size: 20px;
 			font-weight: 400;
-			margin-bottom: 80px;
+			margin: 0 0 80px 0;
+			padding-top: 97px;
 		}
 			.service-me__item p {
 				max-width: 73%;
 				margin: 0 auto;
 			}
 	.service-me__button {
-		margin: 43px auto 0;
+		margin: 7px auto 0;
 		width: 320px;
 		height: 68px;
 	}
@@ -246,9 +240,6 @@
 		font-size: 47px;
 		font-weight: 800;
 	}
-	.about-me__ellipse-1024 {
-		width: 500px;
-	}
 		.about-me__profession {
 			font-size: 22px;
 		}
@@ -258,6 +249,10 @@
 	}
 	.about-me__man {
 		width: 350px;
+	}
+
+	.service-me__item p {
+		max-width: 259px;
 	}
 
 	.info-costs-me__container {
@@ -275,7 +270,6 @@
 			right: 95px;
 			transform: rotate(-24deg);
 			font-size: 40.77px;
-			word-spacing: -11px;
 		}
 		.info-costs-me__attribut5 {
 			top: 340px;
@@ -325,6 +319,10 @@
 		height: 40px;
 	}
 
+	.about-me {
+		background-position: 100% 81px;
+		background-size: 479px;
+	}
 	.about-me__container {
 		flex-wrap: wrap;
 	}
@@ -360,12 +358,8 @@
 				}
 			.about-me__man {
 				order: 1;
-				margin: 0 auto;
+				margin: 0 50px 0 auto;
 			}
-	.about-me__ellipse-1024 {
-		bottom: 489px;
-		width: 550px;
-	}
 
 	.service-me {
 		padding: 70px 0 30px;
@@ -376,12 +370,11 @@
 			margin-bottom: 0;
 		}
 			.service-me__item {
-				min-width: 0;
 				max-width: 48%;
 				margin-bottom: 40px;
 			}
 			.service-me__item p {
-				max-width: 90%;
+				max-width: 180px;
 				font-size: 14px;
 			}
 			.service-me__button {
@@ -483,11 +476,14 @@
 			font-size: 18px;
 		}
 
-	.about-me {	
-		background: linear-gradient(0deg, #fff 40%, #fbfbfb 60%);
+	.about-me {
+		background-image: url(../img/about-me/gradient-320.png);
+		background-position: 50% 95px;
+		background-size: 100% 49%;
 	}
 		.about-me__container {
 			padding-top: 61px;
+			padding-bottom: 30px;
 		}
 			.about-me__info {
 				padding: 12px 0 0;
@@ -500,7 +496,7 @@
 				}
 				.about-me__attribut2 {
 					font-size: 15.18px;
-					word-spacing: -3px;
+					/*word-spacing: -3px;*/
 					transform: rotate(20deg) translateX(-108px) translateY(-667px);
 				}
 				.about-me__attribut3 {
@@ -512,7 +508,7 @@
 				}
 				.about-me__attribut5 {
 					font-size: 18.74px;
-					word-spacing: -4px;
+					/*word-spacing: -4px;*/
 					transform: rotate(-35deg) translateX(461px) translateY(-565px);
 				}
 				.about-me__name {
@@ -529,20 +525,12 @@
 					height: 55px;
 				}
 				.about-me__man {
+					margin: 0 auto;
 					width: 225px;
 				}
-			.about-me__ellipse-1024 {
-				display: none;
-			}
-			.about-me__ellipse-320 {
-				display: block;
-				bottom: 182px;
-				width: 100%;
-				max-height: 293px;
-			}
 
 		.service-me {
-			padding: 43px 0 50px;
+			padding: 12px 0 50px;
 		}
 			.service-me__information {
 				display: flex;
@@ -551,6 +539,8 @@
 				margin-top: 42px;
 			}
 				.service-me__item {
+					background-size: 60px;
+					padding-top: 65px;
 					max-width: 100%;
 					margin: 0 auto 56px;
 				}
@@ -560,7 +550,7 @@
 					.service-me__item p {
 						max-width: 215px;
 						font-size: 16px;
-						margin: 11px auto 0;
+						margin: 11px 5px 0;
 					}
 			.service-me__button {
 				width: 280px;
@@ -637,8 +627,8 @@
 					margin-top: 47px;
 				}
 		.extra-footer {
-			padding: 19px 0;
-			font-size: 12px;
+			padding: 17px 0;
+			font-size: 14px;
 		}
 
 	.title {

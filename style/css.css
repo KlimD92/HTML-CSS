@@ -42,7 +42,6 @@ main {
 		padding: 20px;
 		margin: 100px auto;
 		border-radius: 20px;
-		/*background: linear-gradient(rgb(196 201 255), rgb(255 193 195));*/
 		background-color: rgba(204, 207, 251, 0.95);
 	}
 		.popup-close {
@@ -115,7 +114,6 @@ main {
 			margin: 10px auto;
 			width: 230px;
 			height: 80px;
-			/*text-align: center;*/
 			padding: 10px;
 			resize: none;
 		}
@@ -152,23 +150,6 @@ main {
 			.popup-send:hover {
 				opacity: 1;
 			}
-		/*.popup__success {
-			display: block;
-			width: 350px;
-			height: 49px;
-			padding: 25px 20px 0;
-			margin: 300px auto;
-			border: 1px solid black;
-			border-radius: 20px;
-			box-shadow: 0 0 10px;
-			background: -webkit-linear-gradient(rgb(43 181 76), rgb(187 239 178));
-			background: -o-linear-gradient(rgb(43 181 76), rgb(187 239 178));
-			background: linear-gradient(rgb(43 181 76), rgb(187 239 178));
-			color: #3c3c36;
-			font-size: 18px;
-			font-weight: 700;
-			text-align: center;
-		}*/
 
 		/*Валидация формы*/
 		/*---*/
@@ -275,6 +256,9 @@ main {
 
 .about-me {
 	position: relative;
+	background-image: url(../img/about-me/gradient-1920.png);
+	background-repeat: no-repeat;
+	background-position: bottom right;
 }
 	.about-me__container {
 		display: -webkit-box;
@@ -313,7 +297,6 @@ main {
 				}
 				.about-me__attribut2 {
 					font-size: 29.88px;
-					word-spacing: -8px;
 					-webkit-transform: rotate(-14deg) translateX(378px) translateY(-222px);
 					    -ms-transform: rotate(-14deg) translateX(378px) translateY(-222px);
 					        transform: rotate(-14deg) translateX(378px) translateY(-222px);
@@ -329,14 +312,12 @@ main {
 					    -ms-transform: rotate(21deg) translateX(469px) translateY(-108px);
 					        transform: rotate(21deg) translateX(469px) translateY(-108px);
 					font-size: 37.57px;
-					word-spacing: -10px;
 				}
 				.about-me__attribut5 {
 					-webkit-transform: rotate(-22deg) translateX(-164px) translateY(145px);
 					    -ms-transform: rotate(-22deg) translateX(-164px) translateY(145px);
 					        transform: rotate(-22deg) translateX(-164px) translateY(145px);
 					font-size: 40.77px;
-					word-spacing: -11px;
 				}
 			.about-me__name {
 				font-size: 80px;
@@ -364,29 +345,6 @@ main {
 			margin-right: -80px;
 			max-width: 100%;
 		}
-		.about-me__ellipse-1920 {
-			right: 0;
-			top: 36px;
-			position: absolute;
-			z-index: 0;
-			max-width: 100%;
-		}
-		.about-me__ellipse-1024 {
-			display: none;
-			right: 0;
-			bottom: 0;
-			position: absolute;
-			z-index: 0;
-			max-width: 100%;
-		}
-		.about-me__ellipse-320 {
-			display: none;
-			right: 0;
-			bottom: 0;
-			position: absolute;
-			z-index: 0;
-			max-width: 100%;
-		}
 
 
 .service-me {
@@ -406,12 +364,34 @@ main {
 		margin-top: 88px;
 		list-style-type: none;
 	}
+		.service-me__skill-1 {
+			background-image: url(../img/service-me/Service-1.png);
+			background-repeat: no-repeat;
+			background-position: 50% 0%;
+		}
+		.service-me__skill-2 {
+			background-image: url(../img/service-me/Service-2.png);
+			background-repeat: no-repeat;
+			background-position: 50% 0%;
+		}
+		.service-me__skill-3 {
+			background-image: url(../img/service-me/Service-3.png);
+			background-repeat: no-repeat;
+			background-position: 50% 0%;
+		}
+		.service-me__skill-4 {
+			background-image: url(../img/service-me/Service-4.png);
+			background-repeat: no-repeat;
+			background-position: 50% 0%;
+		}
 		.service-me__item {
 			text-align: center;
 			max-width: 257px;
 			color: #8993ad;
 			font-size: 20px;
 			font-weight: 400;
+			padding-top: 79px;
+			margin: 0 20px;
 		}
 	.service-me__button {
 		display: block;
@@ -517,7 +497,6 @@ main {
 					    -ms-transform: rotate(-24deg);
 					        transform: rotate(-24deg);
 					font-size: 40.77px;
-					word-spacing: -11px;
 				}
 				.info-costs-me__attribut3 {
 					top: 248px;
@@ -542,7 +521,6 @@ main {
 					    -ms-transform: rotate(20deg);
 					        transform: rotate(20deg);
 					font-size: 37.55px;
-					word-spacing: -10px;
 				}
 			.info-costs-me__details {
 				font-size: 45px;
@@ -667,9 +645,9 @@ main {
 	.extra-footer {
 		background: #31293c;
 		color: #FFF;
-		padding: 30px 0;
+		padding: 28px 0;
 		text-align: center;
-		font-size: 16px;
+		font-size: 20px;
 		font-style: normal;
 	}
 

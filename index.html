@@ -23,11 +23,11 @@
 			</nav>
 			<a href="tel:+79299343112" class="header__telephone telephone">+7 (929) 934-31-12</a>
 			<button class="header__button request-a-call">Заказать звонок</button>
-			<button class="header__telephone-button request-a-call_telephone"></a>
+			<button class="header__telephone-button request-a-call_telephone"></button>
 		</div>
 	</header>
 	<main>
-		<form id="commentForm" method="get" action="">
+		<form id="commentForm" method="get">
 			<div class="popup-container">
 				<div class="popup">
 					<input type="hidden" name="project_name" value="Резюме">
@@ -54,10 +54,10 @@
 				<div class="about-me__container">
 					<div class="about-me__info">
 						<span class="about-me__attribut about-me__attribut1 about-me__anim">{ }</span>
-						<span class="about-me__attribut about-me__attribut2 about-me__anim">< div ></span>
+						<span class="about-me__attribut about-me__attribut2 about-me__anim">&lt;div&gt;</span>
 						<span class="about-me__attribut about-me__attribut3 about-me__anim">#</span>
-						<span class="about-me__attribut about-me__attribut4 about-me__anim">< div ></span>
-						<span class="about-me__attribut about-me__attribut5 about-me__anim">< / ></span>
+						<span class="about-me__attribut about-me__attribut4 about-me__anim">&lt;div&gt;</span>
+						<span class="about-me__attribut about-me__attribut5 about-me__anim">&lt;/&gt;</span>
 						<h1 class="about-me__name">
 							Клим Депутатов
 							<span class="about-me__profession">Frontend-разработчик и веб-верстальщик</span>
@@ -67,30 +67,30 @@
 					<img class="about-me__man" src="img/about-me/man.png" alt="Этот человек сделает все в лучшем виде!">
 				</div>
 			</div>
-			<picture>
+			<!-- <picture>
 				<img class="about-me__ellipse-1920" src="img/about-me/gradient-1920.png" alt="Красивый фон">
 				<img class="about-me__ellipse-1024" src="img/about-me/gradient-1024.png" alt="Красивый фон">
 				<img class="about-me__ellipse-320" src="img/about-me/gradient-320.png" alt="Красивый фон">
-			</picture>
+			</picture> -->
 		</section>
 		<section class="service-me" id="services">
 			<div class="service-me__container fixed-container">
 				<h2 class="service-me__title title">Что я делаю</h2>
 				<ul class="service-me__information">
-					<li class="service-me__item">
-						<img src="img/service-me/Service-1.png" alt="Верстка">
+					<li class="service-me__skill-1 service-me__item">
+						<!-- <img src="img/service-me/Service-1.png" alt="Верстка"> -->
 						<p>Вёрстка лендинг–страниц и сайтов любой сложности</p>
 					</li>
-					<li class="service-me__item">
-						<img src="img/service-me/Service-2.png" alt="Адаптивность">
+					<li class="service-me__skill-2 service-me__item">
+						<!-- <img src="img/service-me/Service-2.png" alt="Адаптивность"> -->
 						<p>Адаптивная вёрстка под все браузеры и устройства</p>
 					</li>
-					<li class="service-me__item">
-						<img src="img/service-me/Service-3.png" alt="Программирование">
+					<li class="service-me__skill-3 service-me__item">
+						<!-- <img src="img/service-me/Service-3.png" alt="Программирование"> -->
 						<p>Frontend–разработка и программирование</p>
 					</li>
-					<li class="service-me__item">
-						<img src="img/service-me/Service-4.png" alt="Доработка">
+					<li class="service-me__skill-4 service-me__item">
+						<!-- <img src="img/service-me/Service-4.png" alt="Доработка"> -->
 						<p>Исправление и доработка существующей вёрстки</p>
 					</li>
 				</ul>
@@ -134,10 +134,10 @@
 			<div class="fixed-container">
 				<div class="info-costs-me__container">
 					<span class="info-costs-me__attribut info-costs-me__attribut1">{ }</span>
-					<span class="info-costs-me__attribut info-costs-me__attribut2">< / ></span>
+					<span class="info-costs-me__attribut info-costs-me__attribut2">&lt;/&gt;</span>
 					<span class="info-costs-me__attribut info-costs-me__attribut3">#</span>
 					<span class="info-costs-me__attribut info-costs-me__attribut4">{ }</span>
-					<span class="info-costs-me__attribut info-costs-me__attribut5">< div ></span>
+					<span class="info-costs-me__attribut info-costs-me__attribut5">&lt;div&gt;</span>
 					<h2 class="info-costs-me__details">Адаптивная вёрстка под все устройства и&nbsp;браузеры от 1000 рублей всего за&nbsp;4&nbsp;часа.*</h2>
 					<p class="info-costs-me__sub-details">Срок и стоимость могут отличаться от заявленных и рассчитываются индивидуально, в зависимости от сложности&nbsp;задач.
 					</p>
@@ -151,7 +151,7 @@
 				<ul class="footer__list list">
 					<li class="list-item footer__item"><a href="#services" class="menu-item">Услуги</a></li>
 					<li class="list-item footer__item"><a href="#portfolio" class="menu-item">Портфолио</a></li>
-					<li class="list-item footer__item"><a href="#cos" class="menu-item">Стоимость</a></li>
+					<li class="list-item footer__item"><a href="#cost" class="menu-item">Стоимость</a></li>
 				</ul>
 			</nav>
 			<div class="footer__column-center">
@@ -169,7 +169,7 @@
 			</div>
 		</div>
 		<div class="extra-footer">
-			&copy; Депутатов Клим 2020
+			<small> &copy; Депутатов Клим 2020 </small>
 		</div>
 	</footer>
 	<script src="js/libs/jquery-3.4.1.min.js"></script>
