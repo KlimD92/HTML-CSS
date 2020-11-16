@@ -619,13 +619,16 @@
 						margin-right: 13px;
 						font-size: 15px;
 					}
-			.footer__button {
-				width: 280px;
-				height: 56px;
+			.footer__column-right {
+				width: 100%;
 			}
-				.footer__links {
-					margin-top: 47px;
+				.footer__button {
+					width: 100%;
+					height: 56px;
 				}
+					.footer__links {
+						margin-top: 47px;
+					}
 		.extra-footer {
 			padding: 17px 0;
 			font-size: 14px;

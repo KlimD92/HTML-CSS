@@ -43,6 +43,7 @@ main {
 		margin: 100px auto;
 		border-radius: 20px;
 		background-color: rgba(204, 207, 251, 0.95);
+		box-shadow: 0 0 16px #3a3a3a;
 	}
 		.popup-close {
 			position: relative;
@@ -73,7 +74,7 @@ main {
 				content: '';
 				position: absolute;
 				height: 31px;
-				width: 10px;
+				width: 5px;
 				background-color: #fd5656;
 				left: 10px;
 			}
@@ -137,7 +138,7 @@ main {
 			height: 40px;
 			border-radius: 5px;
 			border: 1px solid #827e7e;
-			background-color: #88f183;
+			background-color: #fff;
 			cursor: pointer;
 			font-size: 16px;
 			font-weight: 600;
