@@ -3,6 +3,7 @@ const concat = require('gulp-concat')
 const htmlMin = require('gulp-htmlmin')
 const autoprefixes = require('gulp-autoprefixer')
 const cleanCSS = require('gulp-clean-css')
+const sass = require('gulp-sass')(require('sass'))
 let uglify = require('gulp-uglify-es').default;
 const babel = require('gulp-babel')
 const notify = require('gulp-notify')
@@ -38,7 +39,8 @@ const libsCss = () => {
 }
 
 const stylesBuild = () => {
-	return src('src/style/**/*.css')
+	return src('src/style/**/*.scss')
+		.pipe(sass().on('error', sass.logError))
 		.pipe(concat('style.css'))
 		.pipe(autoprefixes({
 			cascade: false
@@ -50,12 +52,11 @@ const stylesBuild = () => {
 }
 
 const stylesDev = () => {
-	return src('src/style/**/*.css')
+	return src('src/style/**/*.scss')
+		// .pipe(dest('dev/style'))
 		.pipe(sourcemaps.init())
-		.pipe(concat('style.css'))
-		// .pipe(cleanCSS({
-		// 	level: 0
-		// }))
+		.pipe(sass().on('error', sass.logError))
+		// .pipe(concat('style.css'))
 		.pipe(sourcemaps.write())
 		.pipe(dest('dev/style'))
 		.pipe(browserSync.stream())
@@ -150,7 +151,7 @@ const watchFiles = () => {
 }
 
 watch('src/**/*.html', htmlDev)
-watch('src/style/**/*.css', stylesDev)
+watch('src/style/**/*.scss', stylesDev)
 watch('src/script/**/*.js', scriptsDev)
 watch('src/img/svg/**/*.svg', svgSprites)
 watch('src/script/libs/**', libsJs)

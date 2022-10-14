@@ -2,7 +2,7 @@
 	padding: 70px 0 54px;
 
 	@include mobile {
-		padding: 162px 0 62px;
+		padding: 162px 0 60px;
 	}
 
 	&__container {
@@ -33,191 +33,7 @@
 			grid-template: auto repeat(2, 206px) / repeat(12, 1fr);
 			grid-column-gap: 16px;
    		grid-row-gap: 32px;
-		}
-
-		.top__item:nth-child(1) {
-			grid-column: 1 / 7;
-			order: 1;
-
-			& .top__img {
-				// height: 193px;
-
-				@include mobile {
-					height: Min(300px, 66vw);
-				}
-
-				& img {
-
-					@include mobile {
-						left: -48px;
-					}
-				}
-			}
-
-			@include tablet {
-				grid-column: 1 / 9;
-			}
-
-			@include minitablet {
-				grid-column: 1 / -1;
-			}
-
-			& .top__minititle {
-				
-				@include mobile {
-					font-style: normal;
-					font-weight: 400;
-					font-size: 24px;
-					line-height: 33px;
-				}
-			}
-		}
-		.top__item:nth-child(2) {
-			grid-column: 7 / 13;
-			order: 2;
-
-			@include tablet {
-				grid-column: span 4;
-				order: 4;
-			}
-
-			@include minitablet {
-				grid-column: span 6;
-				order: 3;
-			}
-			@include mobile {
-				padding: 16px;
-			}
-
-			& .top__type {
-
-				@include mobile {
-				display: flex;
-				flex-direction: column;
-				}
-			}
-
-			& img {
-				
-				@include tablet {
-					top: 4px;
-					left: -237px;
-				}
-				@include mobile {
-					top: 0;
-    			left: -4px;
-				}
-			}
-		}
-		.top__item:nth-child(3) {
-			grid-column: span 4;
-			order: 3;
-
-			@include tablet {
-				order: 2;
-			}
-
-			@include minitablet {
-				grid-column: span 6;
-			}
-			@include mobile {
-				padding: 16px;
-			}
-
-			& .top__type {
-
-				@include mobile {
-				display: flex;
-				flex-direction: column;
-				}
-			}
-
-			& img {
-				
-				@include tablet {
-					top: -13px;
-					left: -35px;
-				}
-
-				@include minitablet {
-					top: 4px;
-					left: 0;
-				}
-
-				@include mobile {
-					top: 0;
-					left: 14px;
-				}
-			}
-		}
-		.top__item:nth-child(4) {
-			grid-column: span 4;
-			order: 4;
-
-			@include tablet {
-				order: 3;
-			}
-
-			@include minitablet {
-				order: 4;
-				grid-column: span 6;
-			}
-			@include mobile {
-				padding: 16px;
-			}
-
-			& .top__type {
-
-				@include mobile {
-				display: flex;
-				flex-direction: column;
-				}
-			}
-
-			& img {
-
-				@include tablet {
-					top: 5px;
-				}
-
-				@include mobile {
-					top: 8px;
-					height: 27vw;
-					left: 14px;
-				}
-			}
-		}
-		.top__item:nth-child(5) {
-			grid-column: span 4;
-			order: 5;
-
-			@include minitablet {
-				grid-column: span 6;
-			}
-			@include mobile {
-				padding: 16px;
-			}
-
-			& .top__type {
-
-				@include mobile {
-				display: flex;
-				flex-direction: column;
-				}
-			}
-
-			& img {
-				
-				@include tablet {
-					top: 4px;
-					left: -114px;
-				}
-				@include mobile {
-					top: 0;
-					left: 14px;
-				}
-			}
-		}
+		}		
 	}
 
 	&__item{
@@ -233,20 +49,78 @@
 			padding: 27px 30px 15px;
 		}
 
-		&:not(:first-child){
-			.top__type {
-				margin: 0 0 7px 0;
-				li {
-					line-height: 10px;
-				}
+		&:nth-child(1) {
+			grid-column: 1 / 7;
+			order: 1;
+
+			@include tablet {
+				grid-column: 1 / 9;
 			}
-				a {
-					@include mobile {
-						font-style: normal;
-						font-weight: 400;
-						font-size: 10px;
-						line-height: 100%;
-				}
+
+			@include minitablet {
+				grid-column: 1 / -1;
+			}
+		}
+
+		&:nth-child(2) {
+			grid-column: 7 / 13;
+			order: 2;
+
+			@include tablet {
+				grid-column: span 4;
+				order: 4;
+			}
+
+			@include minitablet {
+				grid-column: span 6;
+				order: 3;
+			}
+			@include mobile {
+				padding: 16px;
+			}
+		}
+
+		&:nth-child(3) {
+			grid-column: span 4;
+			order: 3;
+
+			@include tablet {
+				order: 2;
+			}
+
+			@include minitablet {
+				grid-column: span 6;
+			}
+			@include mobile {
+				padding: 16px;
+			}
+		}
+
+		&:nth-child(4) {
+			grid-column: span 4;
+			order: 4;
+
+			@include tablet {
+				order: 3;
+			}
+
+			@include minitablet {
+				order: 4;
+				grid-column: span 6;
+			}
+			@include mobile {
+				padding: 16px;
+			}
+		}
+		&:nth-child(5) {
+			grid-column: span 4;
+			order: 5;
+
+			@include minitablet {
+				grid-column: span 6;
+			}
+			@include mobile {
+				padding: 16px;
 			}
 		}
 	}
@@ -256,7 +130,7 @@
 		padding: 0;
 		margin: 0 0 14px 0;
 
-		& li {
+		&-item {
 			margin-top: 0;
 			margin-bottom: 0;
 			margin-left: 0;
@@ -270,9 +144,15 @@
 				}
 			}
 
+			&_mobile {
+
+				@include mobile {
+					line-height: 10px;
+				}
+			}
 		}
 
-		& a {
+		&-link {
 			position: relative;
 			font-style: normal;
 			font-weight: normal;
@@ -282,6 +162,15 @@
 			text-decoration: none;
 			z-index: 2;
 
+			&_mobile {
+
+				@include mobile {
+					font-style: normal;
+					font-weight: 400;
+					font-size: 10px;
+					line-height: 100%;
+				}
+			}
 				
 
 			&::after {
@@ -317,6 +206,15 @@
 				opacity: 0;
 			}
 		}
+
+		&_mobile {
+
+			@include mobile {
+				display: flex;
+				margin: 0 0 7px 0;
+				flex-direction: column;
+			}
+		}
 	}
 
 	&__minititle {
@@ -331,46 +229,105 @@
 
 		@include mobile {
 			margin-bottom: 13px;
+		}
+
+		&_mobile {
+			
+			@include mobile {
 			font-style: normal;
 			font-weight: 400;
 			font-size: 16px;
 			line-height: 104%;
-		}
-
-		& .top__link-catalog {
-			display: none;
-			// margin-top: auto;
-
-			@include mobile {
-				display: flex;
 			}
 		}
 	}
 
 	&__img {
-		// margin-bottom: auto;
-		// margin-left: -30px;
 		position: relative;
 		margin: auto 0 30px -30px;
 		height: 308px;
-		// top: auto;
-		// left: auto;
-		// width: fit-content;
-		// height: auto;
-		// object-fit: none;
 
 		@include mobile {
 			margin: auto 0 0 -30px;
 			height: 104px;
 		}
 
-		& img {
+		&_sofas {
+
+			@include mobile {
+				height: Min(300px, 66vw);
+			}
+		}
+
+		&-picture {
 			top: auto;
 			bottom: 0;
 			left: 0;
 			width: auto;
 			height: auto;
 			max-height: 100%;
+
+			&_sofas {
+
+				@include mobile {
+					left: -48px;
+				}
+			}
+
+			&_armchairs {
+				
+				@include tablet {
+					top: 4px;
+					left: -237px;
+				}
+				@include mobile {
+					top: 0;
+    			left: -4px;
+				}
+			}
+
+			&_beds {
+				
+				@include tablet {
+					top: -13px;
+					left: -35px;
+				}
+
+				@include minitablet {
+					top: 4px;
+					left: 0;
+				}
+
+				@include mobile {
+					top: 0;
+					left: 14px;
+				}
+			}
+
+			&_pedestals {
+
+				@include tablet {
+					top: 5px;
+				}
+
+				@include mobile {
+					top: 8px;
+					height: 27vw;
+					left: 14px;
+				}
+			}
+
+			&_chairs {
+				
+				@include tablet {
+					top: 4px;
+					left: -114px;
+				}
+				@include mobile {
+					top: 0;
+					left: 14px;
+				}
+			}
 		}
 	}
 
@@ -389,6 +346,14 @@
 
 		@include mobile {
 			display: none;
+		}
+
+		&_mobile {
+			display: none;
+
+			@include mobile {
+				display: flex;
+			}
 		}
 
 		&::after {
@@ -449,7 +414,7 @@
 
 	&__arrow {
 		position: relative;
-		margin-left: 5px;
+		margin: 0 0 0 5px;
 		width: 22px;
 		height: 22px;
 		background: inherit;

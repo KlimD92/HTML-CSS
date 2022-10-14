@@ -1,0 +1,180 @@
+.suppliers {
+	padding-top: 32px;
+	padding-bottom: 70px;
+	
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__title {
+		margin-bottom: 32px;
+
+		@include mobile {
+			margin-bottom: 34px;
+		}
+	}
+
+	&__minititle {
+		margin-top: 0;
+		margin-bottom: 12px;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 33px;
+
+		@include mobile {
+			font-size: 16px;
+			line-height: 22px;
+		}
+
+		&_benefits-mobile {
+
+			@include mobile {
+				font-size: 14px;
+				line-height: 19px;
+			}
+		}
+	}
+
+	&__subtitle {
+		margin-top: 0;
+		margin-bottom: 0;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 180%;
+		color: #666;
+
+		@include mobile {
+			font-size: 14px;
+			line-height: 178%;
+		}
+
+		&_benefits:not(:last-child) {
+			margin-bottom: 12px;
+		}
+	}
+
+	&__for-suppliers {
+		margin-bottom: 32px;
+		max-width: 843px;
+	}
+
+	&__have {
+		margin-bottom: 32px;
+		max-width: 624px;
+
+		&-list {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+		}
+
+		&-item {
+			padding-left: 37px;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 150%;
+			color: #666;
+
+			@include mobile {
+				font-size: 14px
+			}
+
+			&:nth-child(1) {
+				background: #fff url('../../img/svg/sprite.svg#suppliers-have1') -8px 0 / 41px no-repeat;
+			}
+			&:nth-child(2) {
+				background: #fff url('../../img/svg/sprite.svg#suppliers-have2') -8px 0 / 41px no-repeat;
+			}
+			&:nth-child(3) {
+				background: #fff url('../../img/svg/sprite.svg#suppliers-have3') -8px 0 / 41px no-repeat;
+			}
+
+			&:not(:last-child) {
+				margin-bottom: 12px;
+			}
+		}
+	}
+
+	&__benefits {
+		margin-bottom: 32px;
+		max-width: 843px;
+	}
+
+	&__possibility-title {
+		margin-top: 0;
+		margin-bottom: 13px;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 22px;
+		color: #FF862F;
+	}
+
+	&__warranty {
+		max-width: 838px;
+		
+		&-list {
+			margin-top: 0;
+			margin-bottom: 32px;
+			padding-left: 26px;
+			counter-reset: myCounter;
+		}
+
+		&-item {
+			position: relative;
+			list-style: none;
+
+			&:not(:last-child) {
+				margin-bottom: 14px;
+
+				@include tablet {
+					margin-bottom: 13px;
+				}
+				@include minitablet {
+					margin-bottom: 14px;
+				}
+			}
+
+			&::before {
+				counter-increment: myCounter;
+  			content:counter(myCounter)'.';
+				position: absolute;
+				top: 0;
+				left: -26px;
+				display: inline-block;
+  			text-align: center;
+				color: #FF862F;
+
+				@include mobile {
+					font-style: normal;
+					font-weight: 600;
+					font-size: 16px;
+					line-height: 180%;
+				}
+			}
+		}
+	}
+
+	&__term-for-warranty {
+		padding: 22px 0 22px 109px;
+		max-width: 624px;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 150%;
+		background: url('../../img/suppliers_html/pencil.png') center left / 77px 116px no-repeat;
+
+		@include mobile {
+			padding: 0px 0 0px 52px;
+			max-width: 240px;
+			font-size: 16px;
+			background: url('../../img/suppliers_html/pencil.png') center left / 36px 54px no-repeat;
+		}
+	}
+
+}

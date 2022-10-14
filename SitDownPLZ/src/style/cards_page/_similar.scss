@@ -1,0 +1,64 @@
+.similar {
+	padding-top: 82px;
+	padding-bottom: 70px;
+
+	@include tablet {
+		padding-top: 72px;
+	}
+	@include minitablet {
+		padding-top: 34px;
+	}
+	@include mobile {
+		padding-top: 71px;
+		padding-bottom: 118px;
+	}
+
+	&__title {
+		margin-top: 0;
+		margin-bottom: 25px;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 130%;
+
+		@include mobile {
+			margin-bottom: 23px;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 130%;
+		}
+	}
+
+	&__container {
+		position: relative;
+	}
+
+	&__swiper {
+		overflow: hidden;
+	}
+
+	&__slide-btn {
+		position: absolute;
+		top: -2px;
+		right: 26px;
+
+		@include tablet {
+			right: 36px;
+		}
+		@include minitablet {
+			right: 72px;
+		}
+		@include mobile {
+			top: auto;
+			right: auto;
+			bottom: -50px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	&__slide-btn-prev {
+		margin-right: 8px;
+	}
+}

@@ -1,0 +1,139 @@
+.contacts-page {
+	padding-top: 31px;
+	padding-bottom: 70px;
+
+	&__title {
+		margin-top: 0;
+		margin-bottom: 16px;
+	}
+
+	&__search-area {
+		display: flex;
+		margin-bottom: 32px;
+
+		@include mobile {
+			flex-direction: column;
+		}
+	}
+
+	&__input {
+		margin-right: 32px;
+		padding: 6px 18px;
+		flex: 1;
+		max-width: 624px;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 120%;
+
+		@include minitablet {
+			max-width: 405px;
+		}
+		@include mobile {
+			padding: 19px 18px;
+			margin-right: 0;
+			margin-bottom: 12px;
+			max-width: 100%;
+		}
+	}
+
+	&__search-btn {
+		padding: 17px 35px;
+		max-width: 120px;
+	}
+
+	&__map {
+		width: 100%;
+		height: 510px;
+	}
+
+	.ymaps-2-1-79-balloon, .ymaps-2-1-79-balloon__layout {
+		border-radius: 10px;
+		border: none;
+
+		.header__tel {
+
+			@include mobile {
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 100%;
+			}
+		}
+	}
+	.ymaps-2-1-79-balloon__content {
+		padding: 30px 30px 39px;
+
+		@include mobile {
+			padding: 20px 20px 29px;
+		}
+	}
+
+}
+
+.balloon {
+
+
+	&__title {
+		margin-top: 0;
+		margin-bottom: 7px;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 100%;
+
+		@include mobile {
+			font-size: 14px;
+			line-height: 19px;
+		}
+	}
+
+	&__address {
+		display: block;
+		margin-top: 0;
+		margin-bottom: 8px;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 180%;
+
+		@include mobile {
+			display: block;
+			margin-bottom: 16px;
+			font-size: 12px;
+			line-height: 16px;
+		}
+	}
+
+	&__time {
+		margin-top: 13px;
+		margin-bottom: 9px;
+		padding: 13px 0;
+		max-width: 200px;
+		border-top: 1px solid #F6F6F6;
+		border-bottom: 1px solid #F6F6F6;
+
+		@include mobile {
+			padding: 6px 0;
+		}
+	}
+
+	&__what {
+		max-width: 192px;
+	}
+
+	&__grey-text, &__simple-text {
+		margin: 0;
+		padding: 0;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 140%;
+	}
+
+	&__grey-text {
+		color: #999;
+	}
+	&__simple-text {
+		color: #333;
+	}
+}

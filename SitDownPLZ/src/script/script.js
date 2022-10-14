@@ -47,161 +47,222 @@ window.addEventListener('DOMContentLoaded', function(){
 	// Swiper
 	const heroSlider = document.querySelector('.hero__swiper');
 
-	let swiperHero = new Swiper(heroSlider, {
-		slidesPerView: 1,
-		spaceBetween: 0,
-		effect: 'fade',
-		autoplay: {
-			delay: 2500,
-		},
-		pagination: {
-			el: '.hero__swiper-pagination',
-			clickable: true,
-		},
-		simulateTouch:false,
-	});
+	if (heroSlider) {
+		let swiperHero = new Swiper(heroSlider, {
+			slidesPerView: 1,
+			spaceBetween: 0,
+			effect: 'fade',
+			autoplay: {
+				delay: 2500,
+			},
+			pagination: {
+				el: '.hero__swiper-pagination',
+				clickable: true,
+			},
+			simulateTouch:false,
+		});
+	}
 
 
 
 	const specialSlider = document.querySelector('.special__swiper');
 
-	let swiperSpecial = new Swiper(specialSlider, {
-		slidesPerGroup: 3,
-		slidesPerView: 3,
-		spaceBetween: 32,
-		simulateTouch: false,
-		navigation: {
-			nextEl: '.special__slide-btn-next',
-			prevEl: '.special__slide-btn-prev',
-		},
-		a11y: {
-			prevSlideMessage: 'Предыдущий слайд',
-			nextSlideMessage: 'Следующий слайд',
-		},
-		breakpoints: {
-			1366: {
-				slidesPerView: 'auto'
+	if (specialSlider) {
+		let swiperSpecial = new Swiper(specialSlider, {
+			slidesPerGroup: 3,
+			slidesPerView: 3,
+			spaceBetween: 32,
+			simulateTouch: false,
+			navigation: {
+				nextEl: '.special__slide-btn-next',
+				prevEl: '.special__slide-btn-prev',
 			},
-			1021: {
-				slidesPerGroup: 3,
-				slidesPerView: 3,
+			a11y: {
+				prevSlideMessage: 'Предыдущий слайд',
+				nextSlideMessage: 'Следующий слайд',
 			},
-			600: {
-				slidesPerGroup: 2,
-				slidesPerView: 2,
-			},
-			320: {
-				slidesPerGroup: 1,
-				slidesPerView: 1,
+			breakpoints: {
+				1366: {
+					slidesPerView: 'auto'
+				},
+				1021: {
+					slidesPerGroup: 3,
+					slidesPerView: 3,
+				},
+				600: {
+					slidesPerGroup: 2,
+					slidesPerView: 2,
+				},
+				320: {
+					slidesPerGroup: 1,
+					slidesPerView: 1,
+				}
 			}
-		}
-	});
+		});
+	}
 
 
 
 	const usefullSlider = document.querySelector('.usefull__swiper');
 
-	let swiperUsefull = new Swiper(usefullSlider, {
-		slidesPerView: 3,
-		slidesPerGroup: 3,
-		spaceBetween: 32,
-		simulateTouch: false,
-		navigation: {
-			nextEl: '.usefull__slide-btn-next',
-			prevEl: '.usefull__slide-btn-prev',
-		},
-		a11y: {
-			prevSlideMessage: 'Предыдущий слайд',
-			nextSlideMessage: 'Следующий слайд',
-		},
-		breakpoints: {
-			1366: {
-				slidesPerView: 2,
-				slidesPerGroup: 2,
+	if (specialSlider) {
+		let swiperUsefull = new Swiper(usefullSlider, {
+			slidesPerView: 3,
+			slidesPerGroup: 3,
+			spaceBetween: 32,
+			simulateTouch: false,
+			navigation: {
+				nextEl: '.usefull__slide-btn-next',
+				prevEl: '.usefull__slide-btn-prev',
 			},
-			1021: {
-				slidesPerView: 3,
-				slidesPerGroup: 3,
+			a11y: {
+				prevSlideMessage: 'Предыдущий слайд',
+				nextSlideMessage: 'Следующий слайд',
 			},
-			765: {
-				slidesPerView: 2,
-				slidesPerGroup: 2,
-			},
-			320: {
-				slidesPerView: 1,
-				slidesPerGroup:1,
+			breakpoints: {
+				1366: {
+					slidesPerView: 2,
+					slidesPerGroup: 2,
+				},
+				1021: {
+					slidesPerView: 3,
+					slidesPerGroup: 3,
+				},
+				765: {
+					slidesPerView: 2,
+					slidesPerGroup: 2,
+				},
+				320: {
+					slidesPerView: 1,
+					slidesPerGroup:1,
+				}
 			}
-		}
-	});
+		});
+	}
 
 	// Tooltip
-	tippy('.contacts__comment', {
-		content: 'Реплицированные с зарубежных источников, исследования формируют глобальную сеть.',
-		theme: 'background-?',
-		arrow: true,
-		maxWidth: 300,
-		touch: true,
-	});
+	let contactsComment = document.querySelector('.contacts__comment')
+	if (contactsComment) {
+		tippy('.contacts__comment', {
+			content: 'Реплицированные с зарубежных источников, исследования формируют глобальную сеть.',
+			theme: 'background-?',
+			arrow: true,
+			maxWidth: 300,
+			touch: true,
+		});
+	}
 
 	// Mask
-	var phone = document.getElementById("tel");
+	var phoneMain = document.getElementById("telMain");
 
-	var im = new Inputmask("+7(999) 999-9999");
-	im.mask(phone);
+	if (phoneMain) {
+		var im = new Inputmask("+7(999) 999-9999");
+		im.mask(phoneMain);
+	}
 
-
-	// var name = document.getElementById("name");
-	// Inputmask("", {
-	// 	positionCaretOnClick: "radixFocus",
-	// 	_radixDance: true,
-	// 	numericInput: true,
-	// 	placeholder: "",
-	// }).mask(name);
+	
 
 	// Validate
+	let contactsForm = document.querySelector('.contacts__form');
 
-	new JustValidate('.contacts__form', {
-    rules: {
-      name: {
-        required: true,
-				minLength: 2,
-				maxLength: 15,
-      },
-      tel: {
-        required: true,
-				function: (name, value) => {
-					const tele = phone.inputmask.unmaskedvalue()
-					return Number(tele) && tele.length === 10
+	if (contactsForm) {
+		new JustValidate('.contacts__form', {
+			rules: {
+				name: {
+					required: true,
+					minLength: 2,
+					maxLength: 40,
+				},
+				tel: {
+					required: true,
+					function: (name, value) => {
+						const tele = phoneMain.inputmask.unmaskedvalue()
+						return Number(tele) && tele.length === 10
+					}
+				},
+				email: {
+					required: true,
+					email: true
+				},
+				checkbox: {
+					required: true,
+				},
+			},
+
+			colorWrong: '#FF6972',
+
+			messages: {
+				name: 'Недопустимый формат',
+				tel: 'Недопустимый формат',
+				email: 'Недопустимый формат',
+				checkbox: 'Нужно поставить галочку',
+			},
+			submitHandler: function(thisForm) {
+				let formData = new FormData(thisForm);
+
+				let xhr = new XMLHttpRequest();
+
+				xhr.onreadystatechange = function() {
+					if (xhr.readyState === 4) {
+						if (xhr.status === 200) {
+							console.log('Отправлено');
+							let popupContainerBuy = document.querySelector('.card__popup-container-buy');
+							let html = document.querySelector('html');
+							if (popupContainerBuy) {
+								popupContainerBuy.classList.remove('card__popup-container-buy-is-active');
+							}
+							document.querySelector('.popup-container-successful-sending').classList.add('popup-container-successful-sending-is-active');
+							html.classList.add('scroll-off');
+						}
+					}
 				}
-      },
-      email: {
-        required: true,
-        email: true
-      },
-    },
 
-		colorWrong: '#FF6972',
+				xhr.open('POST', 'mail.php', true);
+				xhr.send(formData);
 
-		messages: {
-			name: 'Недопустимый формат',
-			tel: 'Недопустимый формат',
-			email: 'Недопустимый формат',
-		},
-  });
+				thisForm.reset();
+			},
+		});
+	}
+
+	let popupContainerSuccess = document.querySelector('.popup-container-successful-sending');
+	let popupCloseBtn = document.querySelectorAll('.popup-close-btn');
+	let html = document.querySelector('html');
+
+	popupCloseBtn.forEach(e => {
+		e.addEventListener('click', ()=> {
+			popupContainerSuccess.classList.remove('popup-container-successful-sending-is-active');
+			html.classList.remove('scroll-off');
+		})
+	})
+	window.onclick = (e) => {
+    if (e.target === popupContainerSuccess) {
+			popupContainerSuccess.classList.remove('popup-container-successful-sending-is-active');
+			html.classList.remove('scroll-off');
+    }        
+	}
+	document.addEventListener('keydown', function(e) {
+		if (e.key === 'Escape') {
+			popupContainerSuccess.classList.remove('popup-container-successful-sending-is-active');
+			html.classList.remove('scroll-off');
+		}
+	});
 
 	// Btn
 
 	// Load more
 
 	var btnMore = document.querySelector('.high__more');
-	var items = document.querySelectorAll('.high__item');
+	var items = document.querySelectorAll('.high__cards-item');
 
-	btnMore.addEventListener('click', () => {
-		items.forEach(el => {
-			el.classList.add('items-block')
-		});
-		
-	btnMore.classList.add('btn-hide')
-	})
+	if (btnMore) {
+		btnMore.addEventListener('click', () => {
+			items.forEach(el => {
+				el.classList.add('high__cards-item_active')
+			});
+			
+		btnMore.classList.add('btn-hide')
+		})
+	}
 
 })

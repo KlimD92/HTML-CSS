@@ -1,8 +1,31 @@
+.catalog-main {
+	padding-top: 32px;
+	padding-bottom: 70px;
+
+	@include minitablet {
+		padding-top: 31px;
+	}
+	
+	@include mobile {
+		padding-top: 33px;	
+	}
+}
+
 .grid-wrapper {
 	display: grid;
 	grid-template: 1fr / 296px 1fr;
 	grid-template-areas: "sidebar catalog";
 	column-gap: 32px;
+
+	@include tablet {
+		grid-template-areas: "sidebar sidebar"
+												"catalog catalog";
+	}
+
+	@include mobile {
+		display: flex;
+		flex-direction: column;
+	}
 	
 }
 .sidebar {
