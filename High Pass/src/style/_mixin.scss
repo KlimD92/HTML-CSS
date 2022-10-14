@@ -1,0 +1,46 @@
+@import '_breakpoints.scss';
+
+@mixin container {
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-right: 30px;
+	padding-left: 30px;
+	max-width: 1350px;
+
+	@include minitablet {
+		padding: 0 27px;
+	}
+
+	@include mobile {
+		padding: 0 21px;
+	}
+}
+
+@mixin linkHover {
+	color: #FF6E30;
+}
+
+@mixin linkFocus{
+	color: #fff;
+	background: #BC572B;
+	outline: none;
+}
+
+@mixin linkActive{
+	color: #CE4307;
+	background: inherit;
+}
+
+@mixin inputHover {
+	color: #FF6E30;
+}
+@mixin inputFocus {
+	outline: 1px solid #FF6E30;
+}
+@mixin inputActive {
+	outline: none;
+}

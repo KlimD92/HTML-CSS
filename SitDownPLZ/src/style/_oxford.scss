@@ -1,0 +1,73 @@
+.oxford {
+	position: relative;
+	padding: 157px 0 150px;
+	background: url('../img/oxford/banner.jpg') center / cover;
+
+	@include minitablet {
+		background: url('../img/oxford/banner-768.jpg') center / cover;
+	}
+
+	@include mobile {
+		padding: 33px 0 111px;
+	}
+
+	& .container {
+
+		@include minitablet {
+			padding: 0 36px;
+		}
+
+		@include mobile {
+			padding: 0 12px;
+		}
+	}
+
+	&__title {
+		margin-top: 0;
+		margin-bottom: 0px;
+		font-family: 'Playfair Display';
+		color: #D5B986;
+		font-style: normal;
+		font-weight: 900;
+		font-size: 60px;
+		line-height: 117%;
+
+		@include mobile {
+			font-size: 7.5vw;
+		}
+	}
+
+	&__subtitle {
+		margin-top: 0;
+		margin-bottom: 48px;
+		max-width: 508px;
+		color: #fff;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 48px;
+		line-height: 120%;
+
+		@include mobile {
+			margin: 0;
+			padding-right: 23vw;
+			max-width: none;
+			font-size: 5vw;
+		}
+	}
+
+	&__link {
+		display: block;
+		padding: 20px 30px;
+		max-width: 187px;
+
+		@include mobile {
+			position: absolute;
+			display: block;
+			bottom: -92px;
+			padding: 20px 0;
+			width: calc(100% - 24px);
+			max-width: none;
+			text-align: center;
+		}
+	}
+}

@@ -1,0 +1,186 @@
+.hero {
+	padding-top: 34px;
+	padding-bottom: 68px;
+
+	@include mobile {
+		padding-top: 30px;
+		padding-bottom: 50px;
+	}
+
+	&__container {
+		display: grid;
+		grid-template: 1fr / repeat(2, 1fr);
+		gap: 30px;
+
+		@include mobile {
+			display: flex;
+			flex-direction: column;
+			gap: 35px;
+		}
+	}
+
+	&__left {
+		display: grid;
+		margin-top: 7px;
+		padding: 15px 15px 60px 60px;
+		grid-template: 30px 1fr 1fr / 1fr minmax(95px, 123px);
+		// align-items: end;
+		background: url('../img/hero/camera.jpg') 0 0 / cover no-repeat;
+		color: #fff;
+
+		@include tablet {
+			margin-top: 0;
+			padding: 15px 15px 31px 31px;
+		}
+
+		@include minitablet {
+			padding: 15px 15px 31px 30px;
+			grid-template: 30px 1fr 2fr / 1fr minmax(95px, 123px);
+		}
+
+		@include mobile {
+			padding: 6px 6px 29px 30px;
+			grid-template: 21px 9fr 7fr / 1fr 95px;
+		}
+	
+	
+		.hashtag {
+			display: grid;
+			align-items: center;
+			justify-items: center;
+			grid-column: 2 / 3;
+			color: #fff;
+			background-color: #333;
+			font-family: roboto;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 16px;
+			text-decoration: none;
+
+			@include mobile {
+				font-size: 12px;
+				line-height: 14px;
+			}
+		}
+
+		&-content {
+			display: block;
+			margin-top: auto;
+			grid-row: 3 / 4;
+			grid-column: 1 / -1;
+
+			@include mobile {
+				padding-right: 20px;
+			}
+
+		}
+		&-dsc {
+			margin-top: 0;
+			margin-bottom: 3px;
+			font-family: roboto;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 16px;
+			line-height: 19px;
+
+			@include tablet {
+				margin-bottom: 8px;
+			}
+
+			@include minitablet {
+				margin-bottom: 14px;
+			}
+
+			@include mobile {
+				margin-bottom: 10px;
+				font-size: 14px;
+				line-height: 16px;
+			}
+		}
+		&-title {
+			margin-top: 0;
+			margin-bottom: 19px;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 36px;
+			line-height: 104%;
+
+			@include tablet {
+				margin-bottom: 21px;
+				font-size: 34px;
+				line-height: 100%;
+			}
+
+			@include minitablet {
+				margin-bottom: 23px;
+				line-height: 90%;
+			}
+
+			@include mobile {
+				margin-bottom: 13px;
+				font-size: 24px;
+				line-height: 110%;
+			}
+		}
+	}
+
+	&__right {
+		&-title {
+			margin-top: 0;
+			margin-bottom: 25px;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 24px;
+			line-height: 104%;
+
+			@include minitablet {
+				margin-bottom: 17px;
+				font-size: 22px;
+			}
+
+			@include mobile	 {
+				margin-bottom: 15px;
+				font-size: 18px;
+				line-height: 104%;
+			}
+		}
+		&-img-area {
+			display: grid;
+			position: relative;
+			grid-template: minmax(186px, 300px) minmax(105px, 257px) / 1fr 1fr;
+			grid-auto-flow: dense;
+			gap: 30px;
+
+			@include tablet {
+				grid-template: 332px 186px / 1fr 1fr;
+			}
+			
+			@include minitablet {
+				grid-template: 228px 134px / 1fr 1fr;
+			}
+
+			@include mobile {
+				grid-template: 186px 105px / 1fr 1fr;
+			}
+
+
+			
+		}
+		&-img {
+			position: relative;
+
+			& img {
+				position: absolute;	
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			&_big {
+				grid-column: span 2;
+			}
+		}
+	}
+}

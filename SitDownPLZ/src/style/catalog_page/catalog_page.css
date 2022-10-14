@@ -1,0 +1,228 @@
+.grid-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+  -ms-grid-columns: 296px 1fr;
+      grid-template: 1fr / 296px 1fr;
+      grid-template-areas: "sidebar catalog";
+  -webkit-column-gap: 32px;
+          column-gap: 32px;
+}
+
+.sidebar {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: sidebar;
+}
+
+.catalog {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: catalog;
+}
+
+.sidebar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #666;
+}
+
+.sidebar__category {
+  margin-bottom: 29px;
+}
+
+.sidebar__cost {
+  margin-bottom: 50px;
+}
+
+.sidebar__cost .sidebar__minititle {
+  margin-bottom: 4px;
+}
+
+.sidebar__discount {
+  margin-bottom: 27px;
+}
+
+.sidebar__color {
+  margin-bottom: 90px;
+}
+
+.sidebar__filter {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+}
+
+.sidebar__minititle {
+  margin-top: 0;
+  margin-bottom: 9px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 130%;
+  color: #666;
+}
+
+.sidebar__list {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar__item {
+  list-style-type: none;
+}
+
+.sidebar__item:not(:last-child) {
+  margin-bottom: 11px;
+}
+
+.sidebar__checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  cursor: pointer;
+}
+
+.sidebar__checkbox-input:focus ~ .sidebar__checkbox-true {
+  outline: 1px solid #A65CF0;
+  outline-offset: 2px;
+}
+
+.sidebar__checkbox-input:checked ~ .sidebar__checkbox-true::before, .sidebar__checkbox-input:checked ~ .sidebar__checkbox-true::after {
+  display: block;
+}
+
+.sidebar__checkbox-input:checked ~ .sidebar__checkbox-true {
+  background: #A65CF0;
+  border: 1px solid #A65CF0;
+}
+
+.sidebar__checkbox-true {
+  position: relative;
+  display: inline-block;
+  margin-right: 11px;
+  width: 20px;
+  height: 20px;
+  background: initial;
+  border: 1px solid #999;
+  border-radius: 2px;
+  -webkit-transition: background .1s, background .1s;
+  transition: background .1s, background .1s;
+}
+
+.sidebar__checkbox-true::before, .sidebar__checkbox-true::after {
+  content: '';
+  display: none;
+  position: absolute;
+  height: 2px;
+  background-color: #fff;
+}
+
+.sidebar__checkbox-true::before {
+  top: 10px;
+  left: 13%;
+  width: 7px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.sidebar__checkbox-true::after {
+  top: 8px;
+  right: 9%;
+  width: 11px;
+  -webkit-transform: rotate(127deg);
+          transform: rotate(127deg);
+}
+
+.sidebar__checkbox-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+}
+
+.sidebar__checkbox:first-child {
+  margin-right: auto;
+}
+
+.sidebar__cost-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sidebar__cost-input {
+  margin-left: 12px;
+  padding: 6px 12px;
+  max-width: 86px;
+  height: 30px;
+  border: 1px solid #999;
+  border-radius: 2px;
+}
+
+.sidebar__oxford {
+  padding: 220px 0 30px 30px;
+  background: #333 url("../../img/oxford/banner-catalog.jpg") center top/contain no-repeat;
+  border-radius: 10px;
+}
+
+.sidebar__oxford-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 200px;
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 32px;
+  color: #D5B986;
+}
+
+.sidebar__oxford-subtitle {
+  margin-top: 0;
+  margin-bottom: 14px;
+  max-width: 200px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #999;
+}
+
+.catalog__title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 130%;
+}
+
+.catalog__swiper {
+  position: relative;
+  width: 100%;
+  height: 1300px;
+  overflow: hidden;
+}
+
+.catalog__swiper .high__item {
+  position: relative;
+  height: calc((100% - 32px) / 3);
+  overflow: hidden;
+}

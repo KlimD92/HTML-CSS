@@ -1,0 +1,171 @@
+.hero {
+
+	& .container {
+		padding: 0 30px;
+	}
+
+	&__swiper {
+		position: relative;
+
+		@include mobile {
+			height: 210px;
+		}
+
+
+		&-pagination {
+			position: absolute;
+			bottom: 19px;
+			text-align: center;
+			z-index: 10;
+
+			.swiper-pagination-bullet {
+				width: 14px;
+				height: 14px;
+				margin: 0 16px;
+				background-color: #333;
+				opacity: 0.3;
+
+				@include mobile {
+					// margin: 0 3px;
+					width: 6px;
+					height: 6px;
+				}
+			}
+			
+			.swiper-pagination-bullet-active {
+				background-color: #333;
+				opacity: 1;
+			}
+		}
+	}
+	&__slide {
+		padding: 81px 0 100px;
+
+		@include mobile {
+			padding: 30px 0 0;
+		}
+
+		&:nth-child(1) {
+			background: url('../img/hero/swap1.jpg') center / cover no-repeat;
+
+			& .hero__title {
+				color: #999;
+			}
+
+			@include tablet {
+				background: url('../img/hero/swap1-tablet.jpg') center / cover no-repeat;
+			}
+
+			@include minitablet {
+				background: url('../img/hero/swap1-768.jpg') center / cover no-repeat;
+			}
+
+			// @include mobile320 {
+			// 	background: url('../img/hero/swap1-320.jpg') center / cover no-repeat;
+			// }
+		}
+		&:nth-child(2) {
+			background: url('../img/hero/swap2.jpg') center / cover no-repeat;
+
+			& .hero__title {
+				color: #999;
+			}
+
+			@include tablet {
+				background: url('../img/hero/swap2-tablet.jpg') center / cover no-repeat;
+			}
+
+			@include minitablet {
+				background: url('../img/hero/swap2-768.jpg') center / cover no-repeat;
+			}
+
+			// @include mobile320 {
+			// 	background: url('../img/hero/swap2-320.jpg') center / cover no-repeat;
+			// }
+		}
+		&:nth-child(3) {
+			background: url('../img/hero/swap3.jpg') center / cover no-repeat;
+
+			& .hero__title {
+				color: #fff;
+			}
+
+			@include tablet {
+				background: url('../img/hero/swap3-tablet.jpg') center / cover no-repeat;
+			}
+
+			@include minitablet {
+				background: url('../img/hero/swap3-768.jpg') center / cover no-repeat;
+			}
+
+			// @include mobile320 {
+			// 	background: url('../img/hero/swap3-320.jpg') center / cover no-repeat;
+			// }
+		}
+		
+	}
+	&__title {
+		margin-top: 0;
+		margin-bottom: 89px;
+		max-width: 555px;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 48px;
+		line-height: 65px;
+
+		// @include mobile {
+		// 	margin: 0;
+		// 	max-width: 400px;
+		// 	font-style: normal;
+		// 	font-weight: 700;
+		// 	font-size: 32px;
+		// 	line-height: 32px;
+		// }
+		@include mobile {
+			max-width: 204px;
+			font-style: normal;
+			font-weight: 700;
+			font-size: 20px;
+			line-height: 27px;
+		}
+	}
+	&__link {
+		position: absolute;
+    left: Max(26px, calc((100vw - 1280px) / 2));
+    bottom: 80px;
+    display: block;
+    padding: 20px 48px;
+
+		@include tablet {
+			left: Max(36px, calc((100vw - 1280px) / 2));
+		}
+		
+		@include minitablet {
+			left: Max(72px, calc((100vw - 1280px) / 2));
+		}
+
+		@include mobile {
+			bottom: -92px;
+			text-align: center;
+			width: calc(100% - 24px);
+			left: Max(13px, calc((100vw - 1280px) / 2));
+		}
+	}
+
+	.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+		margin: 0 8px; 
+
+		@include mobile {
+			margin: 0 3px;
+		}
+	}
+	.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+		bottom: 19px;
+
+		@include mobile {
+			bottom: 7px;
+		}
+	}
+
+	
+}

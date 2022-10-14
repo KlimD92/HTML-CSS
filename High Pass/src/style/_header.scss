@@ -1,0 +1,359 @@
+.header {
+	display: grid;
+	grid-area: header;
+
+	&__up {
+		background-color: #202020;
+
+		&-container {
+			display: grid;
+			padding-top: 25px;
+			padding-bottom: 25px;
+			position: relative;
+			grid-template: 1fr / minmax(auto, 190px) 1fr minmax(auto, 130px);
+			overflow: hidden;
+
+			@include tablet {
+					padding-top: 28px;
+					padding-bottom: 27px;
+					grid-template: 1fr / minmax(auto, 168px) 1fr minmax(auto, 25px);
+			}
+
+			@include mobile {
+				padding: 25px 21px 25px;
+				grid-template: 1fr / minmax(auto, 111px) 1fr minmax(auto, 25px);
+			}
+		}
+	}
+
+	&__logo {
+		position: relative;
+		// width: 190px;
+		height: 100%;
+
+		@include mobile {
+			height: 88%;
+		}
+
+		&:focus {
+			outline: 2px solid #bc572b;
+			outline-offset: 5px;
+		}
+		& img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__nav {
+		display: grid;
+		align-items: center;
+		padding: 0 90px 0 140px;
+		transition: transform .3s, opacity .2s;
+
+		@include tablet {
+			padding: 0 132px 0 80px;					
+		}
+
+		@include minitablet {
+			display: none;
+		}
+
+		@include mobile {
+			display: none;
+			position: fixed;
+			top: 72px;
+			left: 0;
+			display: flex;
+			padding: 55px 21px;
+			width: 100%;
+			height: 100%;
+			transform: scaleY(0);
+			transform-origin: top;
+			background-color: #202020;
+			opacity: 0;
+			z-index: 3;
+		}
+
+		&_is-active {
+			display: block;
+			transform: scaleY(1);
+			opacity: 1;
+		}
+	}
+
+	&__menu {
+		display: grid;
+		margin: 0;
+		padding: 0;
+		grid-auto-flow: column;
+		justify-items: center;
+
+		&-item {
+			list-style-type: none;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 16px;
+			line-height: 21px;
+
+			& a {
+				text-decoration: none;
+				color: #fff;
+			}	
+
+			& a:hover {
+				@include linkHover;
+			}
+
+			& a:focus {
+				@include linkFocus;
+			}
+
+			& a:active {
+				@include linkActive;
+			}
+		}
+	}
+
+	&__social {
+		display: grid;
+		margin: 0;
+		padding: 0;
+		grid-template: 30px / repeat(3, 30px);
+		gap: 20px;
+		&-item {
+
+			& a {
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+		}
+		@include tablet {
+			display: none;
+		}
+	}
+
+	&__search-btn {
+		display: none;
+		margin: auto;
+		width: 25px;
+		height: 25px;
+		background: inherit;
+		border: none;
+		background: url('../img/svg/sprite.svg#search') center / cover no-repeat;
+
+		@include tablet {
+			display: block;
+		}
+
+		@include minitablet {
+			grid-column: 3;	
+		}
+
+		@include mobile {
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	&__search-area {
+		position: absolute;
+		display: flex;
+		top: 30%;
+		right: 30px;
+		padding-left: 10px;
+		align-items: center;
+		overflow: hidden;
+		background: #202020;
+		// transform:scaleX(0);
+		transform-origin: right;
+		opacity: 0;
+		transition: transform .2s;
+
+		@include minitablet {
+			right: 27px;
+		}
+
+		@include mobile {
+			right: 21px;
+			left: 21px;
+		}
+		
+		&_active {
+			transform: scaleX(1);
+		}
+			
+				
+	}
+
+	&__search-input {
+		display: block;
+		padding: 0 0 0 10px;
+		margin-right: 9px;
+		width: 300px;
+		height: 30px;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 21px;
+		color: #e9e9e9;
+		background: inherit;
+		border: none;
+		border-bottom: 1px solid #e9e9e9;
+
+		@include mobile {
+			width: 100%;
+		}
+	}
+	&__search-close {
+		display: block;
+		width: 23px;
+		height: 23px;
+		background: url('../img/svg/sprite.svg#cancell-search') center / cover no-repeat;
+		border: none;
+
+		@include mobile {
+			width: 25px;
+		}
+	}
+
+
+
+
+	&__down {
+		display: none;
+		background: #4A4A4A;
+
+		@include minitablet {
+			display: block;
+		}
+
+		&-container {
+			padding-top: 12px;
+			padding-bottom: 12px;
+			
+			@include mobile {
+				padding-top: 11px;
+				padding-bottom: 9px;
+			}
+		}
+	}
+
+	&__burger {
+		display: none;
+		position: relative;
+		width: 25px;
+		height: 25px;
+		background: #4a4a4a;
+		border: none;
+		transform-origin: center;
+		z-index: 4;
+		transition: width .2s, height .2s, border-radius .2s;
+
+		@include mobile {
+			display: block;
+		}
+
+		&-line, &-line::before, &-line::after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			margin-top: -2px;
+			height: 2px;
+			background-color: white;
+			transition: width .2s, transform .3s;
+		}
+
+		&_active {
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+		}
+
+		&-line {
+			width: 20px;
+			
+			&::before {
+				width: 20px;
+				transform: translateY(-7px);
+			}
+
+			&::after {
+				width: 10px;
+				transform: translateY(9px);
+			}
+
+			&_active {
+				width: 0;
+
+				&::before {
+					width: 12px;
+					height: 1px;
+					transform: rotate(-45deg) translate(3px, 6px);
+				}
+
+				&::after {
+					width: 12px;
+					height: 1px;
+					transform: rotate(45deg) translate(6px, -3px);
+				}
+			}
+		}
+	}
+
+	&__nav_down {
+		display: block;
+		padding: 0;
+	}
+
+	&__menu {
+		display: flex;
+
+		@include mobile {
+			padding: 50px 25px;
+			flex-direction: column;
+		}
+
+		&-item {
+			font-style: normal;
+			font-weight: normal;
+			font-size: 16px;
+			line-height: 21px;
+
+			&:not(:last-child) {
+				margin-right: auto;
+
+				@include mobile {
+					margin-bottom: 20px;
+				}
+			}
+
+			& a {
+				color: #fff;
+
+				@include mobile {
+					font-size: 21px;
+				}
+			}
+
+			& a:hover {
+				@include linkHover;
+			}
+
+			& a:focus {
+				@include linkFocus;
+			}
+
+			& a:active {
+				@include linkActive;
+			}
+		}
+	}
+}

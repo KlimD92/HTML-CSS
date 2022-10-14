@@ -1,0 +1,46 @@
+@import '_breakpoints.scss';
+
+
+
+// btnFull
+@mixin btnFullHover {
+	background: #C998FB;
+	border: 2px solid #C998FB;
+}
+
+@mixin btnFullFocus {
+	background: #C998FB;
+	border: 2px solid #7033AC;
+	outline: none;
+}
+@mixin btnFullActive {
+	background: #7033AC;
+	border: 2px solid #7033AC;
+}
+@mixin btnFullDisable {
+	background: #EAEAEA;
+	border: 2px solid #EAEAEA;
+	color: #999;
+}
+
+
+
+// btnEmpty
+@mixin btnEmptyHover {
+	background: #A65CF0;
+	border: 2px solid #A65CF0;
+	color: #fff;
+}
+
+@mixin btnEmptyFocus {
+	background: #C998FB;
+	border: 2px solid #A65CF0;
+	color: #fff;
+	outline: none;
+}
+
+@mixin btnEmptyActive {
+	background: #7033AC;
+	border: 2px solid #7033AC;
+	color: #fff;
+}

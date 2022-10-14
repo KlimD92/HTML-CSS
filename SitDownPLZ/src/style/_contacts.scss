@@ -1,0 +1,252 @@
+.contacts {
+	padding-bottom: 70px;
+	// .container {
+	// 	background: url('../img/contacts/exposition.png') center right / auto no-repeat content-box;
+	// }
+	&__container {
+		display: flex;
+		// max-width: 624px;
+		// background: url('../img/contacts/exposition.png') right center / 100% auto no-repeat;
+	}
+
+	&__left {
+		flex: 1 1 50%;
+
+		@include tablet {
+			padding-right: 17px;
+		}
+		@include minitablet {
+			padding-right: 32px;
+			flex: 1 1 70%;
+		}
+		@include mobile {
+			padding-right: 0;
+		}
+	}
+
+	&__right {
+		flex: 1 1 50%;
+		background: url('../img/contacts/exposition.png') center right / 97.5% auto no-repeat;
+
+		@include tablet {
+			flex: 0 1 63%;
+		}
+
+		@include minitablet {
+			flex: 1 1 30%;
+			background: url('../img/contacts/exposition-768.png') 0 12px / auto 95% no-repeat;
+		}
+
+		@include mobile {
+			display: none;
+		}
+	}
+
+	&__title {
+		margin-top: 0;
+		margin-bottom: 9px;
+	}
+
+	&__subtitle {
+		margin-top: 0;
+		margin-bottom: 16px;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 19px;
+	}
+
+	&__comment {
+		display: inline-block;
+		width: 14px;
+		height: 14px;
+		background: url('../img/svg/sprite.svg#tooltip') center / cover no-repeat;
+		cursor: pointer;
+		transition: background .1s;
+
+		&:hover {
+			background: url('../img/svg/sprite.svg#tooltip-hover') center / cover no-repeat;
+		}
+
+		&:focus {
+			outline: none;
+			background: url('../img/svg/sprite.svg#tooltip-hover') center / cover no-repeat;
+		}
+	}
+
+	
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+
+		.input-main {
+			padding: 6px 18px;
+			width: 100%;
+			transition: background .2s, border .2s;
+			&:hover {
+				background: #eaeaea ;
+				border: 1px solid #eaeaea;
+			}
+	
+			&:focus {
+				background: #F8EFFF ;
+				border: 1px solid #A65CF0;
+				outline: none;
+			}
+		}
+
+		.js-validate-error-label {
+			position: absolute;
+			top: -18px;
+			left: 18px;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 12px;
+			line-height: 16px;
+		}
+	}
+
+	.contacts__form-input-area {
+		position: relative;
+		margin-bottom: 30px;
+	}
+
+	// &__name {
+	// 	margin-bottom: 30px;
+	// 	padding: 6px 18px;
+	// }
+
+	// &__tel {
+	// 	margin-bottom: 30px;
+	// 	padding: 6px 18px;
+	// }
+
+	// &__email {
+	// 	margin-bottom: 30px;
+	// 	padding: 6px 18px;
+	// }
+
+	&__btn {
+		margin-bottom: 12px;
+		padding: 17px 33px;
+		max-width: 159px;
+	}
+
+	&__checkbox {
+		display: flex;
+		max-width: fit-content;
+		align-items: center;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 19px;
+		cursor: pointer;
+		
+		&-input {
+
+			&:focus ~ .contacts__checkbox-true {
+				// background: #C998FB;
+				// border: 1px solid #A65CF0;
+				outline: 1px solid #A65CF0;
+				outline-offset: 2px;
+			}
+
+			&:checked ~ .contacts__checkbox-true::before, &:checked ~ .contacts__checkbox-true::after {
+				display: block;
+			}
+			&:checked ~ .contacts__checkbox-true {
+				background: #A65CF0;
+				border: 1px solid #A65CF0;
+			}
+		}
+		&-true {
+			position: relative;
+			display: inline-block;
+			margin-right: 8px;
+			width: 14px;
+			height: 14px;
+			background: initial;
+			border: 1px solid #999;
+			border-radius: 2px;
+			transition: background .1s, background .1s;
+
+			&::before, &::after {
+				content: '';
+				display: none;
+				position: absolute;
+				height: 2px;
+				background-color: #fff;
+			}
+
+			&::before {
+				top: 6px;
+				left: 10%;
+				width: 5px;
+				transform: rotate(45deg);
+			}
+
+			&::after {
+				top: 5px;
+				right: 0%;
+				width: 9px;
+				transform: rotate(135deg);
+			}
+		}
+		&-text {
+			
+
+			@include mobile {
+				font-style: normal;
+				font-weight: 400;
+				font-size: 12px;
+				line-height: 16px;
+			}
+		}
+	}
+
+	&__terms-of-use {
+		position: relative;
+		color: #A65CF0;
+		text-decoration: none;
+
+		&:focus {
+			outline: none;
+		}
+
+		&:focus::before {
+			visibility: visible;
+			opacity: 1;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 2px;
+			left: -2px;
+			visibility: hidden;
+			opacity: 0;
+			height: 102%;
+			width: 102%;
+			background: #EBD1FF;
+			z-index: -1;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 2px;
+			left: 0;
+			height: 1px;
+			width: 100%;
+			background: #A65CF0;
+		}
+	}
+}
+
+.tippy-box[data-theme~='background-?'] {
+	// background: #9D5CD0;
+	text-align: center;
+	padding: 5px;
+	max-width: 157px;
+}

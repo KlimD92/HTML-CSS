@@ -1,0 +1,192 @@
+.footer {
+
+	// @include mobile {
+	// 	display: none;
+	// }
+
+	&__up {	
+		padding: 24px 0 16px;
+		background-color: #202020;
+
+		@include mobile {
+			padding: 31px 0 32px;
+		}
+	
+
+	}
+	&__container {
+		display: grid;
+		grid-template: 1fr / repeat(12, 1fr);
+		gap: 25px;
+
+		@include tablet {
+			grid-template: 1fr / repeat(16, 1fr);
+		}
+
+		@include minitablet {
+			grid-template: 1fr / repeat(12, 1fr);
+		}
+
+		@include mobile {
+			grid-template: 1fr / repeat(1, 1fr);
+		}
+
+	}
+	&__left {
+		padding-top: 2px;
+		display: flex;
+		flex-direction: column;
+		grid-column: 4 span;
+
+		@include tablet {
+			padding-top: 6px;
+			grid-column: 6 span;
+		}
+
+		@include minitablet {
+			grid-column: 7 span;
+		}
+
+		@include mobile {
+			display: none;
+		}
+
+	}
+	&__logo {
+		margin-bottom: 6px;
+		max-width: 190px;
+		max-height: 30px;
+
+		@include tablet {
+			max-width: 167px;
+		}
+	}
+	&__ye {
+		margin: 0;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 18px;
+		color: #e9e9e9;
+	}
+	&__center {
+		display: flex;
+		flex-direction: column;
+		grid-column: 5 span;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 22px;
+
+		@include tablet {
+			grid-column: 7 span;
+		}
+
+		@include minitablet {
+			display: none;
+		}
+
+	}
+	&__quote {
+		margin: 0;
+		font-family: roboto;
+		color: #cacaca;
+	}
+	
+	&__autor {
+		margin: 0;
+		font-family: roboto;
+		color: #666;
+	}
+	&__right {
+		display: flex;
+		flex-direction: column;
+		grid-column: 3 span;
+		align-items: end;
+
+		@include minitablet {
+			grid-column: 5 span;
+		}
+
+		@include mobile {
+			align-items: center;
+		}
+
+	}
+	&__more {
+		margin-top: 0;
+		margin-bottom: 8px;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 22px;
+		color: #cacaca;
+
+		@include tablet {
+			margin-right: auto;
+			font-size: 15px;
+		}
+
+		@include minitablet {
+			margin-right: 0;
+		}
+
+	}
+	&__list {
+		margin: 0;
+		padding-right: 13px;
+		display: flex;
+
+		@include mobile {
+			padding-right: 0;
+			padding-left: 0;
+		}
+
+	}
+	&__item {
+		width: 30px;
+		height: 30px;
+
+		&:not(:last-child) {
+			margin-right: 21px;
+		}
+
+		& a {
+			display: block;
+			width: 100%;
+			height: 100%;
+
+		}
+	}
+
+	&__down {
+		display: none;
+		padding: 14px 0 13px;
+		background: #4a4a4a;
+
+		@include mobile {
+			display: block;
+		}
+
+		&-logo-container {
+			display: flex;
+			flex-direction: column;
+
+			.footer__logo {
+				margin: 0 auto 4px;
+				max-width: 167px;
+				max-height: 18px;
+			}
+
+			.footer__ye {
+				margin: 0 auto;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 10px;
+				line-height: 13px;
+				color: #e9e9e9;
+			}
+
+		}
+	}
+}
